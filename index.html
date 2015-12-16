@@ -1,18 +1,43 @@
 <html>
+	<title>GeeMail</title>
+	<h1>Welcome to GeeMail</h1>
 	<head>
+		<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+		</style>
+
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+    
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+        document.getElementById("date").innerHTML = window.geemails[0].date;
+        document.getElementById("sender").innerHTML = window.geemails[0].sender;
+        document.getElementById("subject").innerHTML = window.geemails[0].subject;
         
       };
     </script>
+    
+    <script type = "text/javascript">
+    	function displayMessage() {
+        	window.alert(window.geemails[0].body);
+        };
+    </script>
 	</head>
-	<body>
-		<div class="container" id="main">
-			Build Me!
-		</div>
-	</body>
+	
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Sender</th>
+			<th>Subject</th>
+		<tr>
+			<td><p id="date"></p></td>
+			<td><p id="sender"></p></td>
+			<td><a href="javascript:displayMessage();"><p id="subject"></p></a></td>
+		</tr>
+	</table>
 </html>
