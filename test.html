@@ -1,0 +1,28 @@
+<html>
+	<title>GeeMail</title>
+	<h1>Welcome to GeeMail</h1>
+	<head>
+		<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+		</style>
+
+		<script src="js/mail-generator.js"></script>
+		<link href="css/style.css" rel="stylesheet" media="screen">
+    <table>
+    <script>
+      window.onload = function(){
+        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+        document.write("<tr><th>Date </th></tr>");
+        for (var i = 0; i < 10; i++){
+  			//document.write("<td>" + window.geemails[i].date + "</td></tr>");
+		}
+      };
+    </script>
+    </table>
+	</head>
+
+	<p id = "date"></p>
+</html>
