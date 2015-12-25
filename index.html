@@ -13,7 +13,6 @@
 
         setInterval(window.geemails.push(getNewMessage()), 3000);
         
-        
         var btn = document.createElement("BUTTON");
         for(var index = 0; index < window.geemails.length; index++) {
         	var container = document.getElementById('container');
@@ -27,8 +26,9 @@
         	container.appendChild(secondHTMLElement);
 
         	var thirdHTMLElement = document.createElement('div');
-        	thirdHTMLElement.innerHTML = "Subject: " + window.geemails[index].subject + "<br><button onclick = 'javascript:displayMessage()'>Show Message</button><br></br>";
+        	thirdHTMLElement.innerHTML = "Subject: " + window.geemails[index].subject + "<br><button onclick = window.alert(window.geemails[" + index + "].body);>Show Message</button><br></br>";
         	container.appendChild(thirdHTMLElement);
+
         }
 
         var inboxCount = document.getElementById('inboxCount');
@@ -37,9 +37,6 @@
         inboxCount.appendChild(count);
       };
 
-      function displayMessage() {
-        	window.alert(window.geemails[0].body);
-        };
     </script>
     </head>
     
